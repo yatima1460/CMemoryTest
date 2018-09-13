@@ -5,8 +5,8 @@
 #include <math.h>
 #include <time.h>
 
-#define RAM_BLOCK     1073741824			//1GB
-#define VALUE_TO_SET  'C'
+#define RAM_BLOCK		1073741824			//1GB
+#define VALUE_TO_SET	'C'
 
 void benchmark_memset(unsigned char* ram)
 {
@@ -39,9 +39,9 @@ int main()
 		abort();
 	}
 	benchmark_function = benchmark_memset;
-	printf("Sequential Write:\t%lf GB/s\n", benchmark(ram));
+	printf("Sequential Write:\t%0.2lf GB/s\n", benchmark(ram));
 	benchmark_function = benchmark_memcpy;
-	printf("Sequential Read:\t%lf GB/s\n\n", benchmark(ram));
+	printf("Sequential Read:\t%0.2lf GB/s\n\n", benchmark(ram));
 	free(ram);
 	return 0;
 }
