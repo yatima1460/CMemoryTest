@@ -15,7 +15,7 @@ void benchmark_memset(unsigned char* ram)
 
 void benchmark_memcpy(unsigned char* ram)
 {
-	memset(ram, VALUE_TO_SET, RAM_BLOCK);
+	memcpy(ram, ram, RAM_BLOCK);
 }
 
 void(*benchmark_function)(unsigned char* ram);
